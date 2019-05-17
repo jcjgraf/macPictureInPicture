@@ -1,0 +1,5 @@
+.eggs
+build/
+dist/
+test.py
+.DS_Store
