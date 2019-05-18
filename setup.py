@@ -4,7 +4,7 @@ run: python setup.py py2app
 
 from setuptools import setup
 
-APP = ['main.py']
+APP = ['PicInPic.py']
 DATA_FILES = []
 OPTIONS = {
     'argv_emulation': True,

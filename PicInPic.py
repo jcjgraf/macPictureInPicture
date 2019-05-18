@@ -6,10 +6,10 @@ import rumps
 
 rumps.debug_mode(True)
 
-class App(rumps.App):
+class PicInPic(rumps.App):
 
 	def __init__(self):
-		super(App, self).__init__('Overlay')
+		super(PicInPic, self).__init__('PicInPic')
 		self.menu = ['Open in VLC']
 
 	def getCurrentUrl(self):
@@ -31,4 +31,4 @@ class App(rumps.App):
 		os.system("/Applications/VLC.app/Contents/MacOS/VLC " + self.getCurrentUrl())
 
 if __name__ == '__main__':
-	App().run()
+	PicInPic().run()
