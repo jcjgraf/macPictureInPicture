@@ -24,11 +24,11 @@ class PicInPic(rumps.App):
 
 		proc = Popen(['/usr/bin/osascript', '-'], stdin=PIPE, stdout=PIPE, stderr=PIPE, universal_newlines=True)
 		stdout, stderr = proc.communicate(script)
-		return stdout
+		return str(stdout).strip()
 
 	@rumps.clicked('Open in VLC')
 	def openOverlay(self, _):
-		os.system("/Applications/VLC.app/Contents/MacOS/VLC " + self.getCurrentUrl())
+		Popen(['/Applications/VLC.app/Contents/MacOS/VLC', self.getCurrentUrl()])
 
 if __name__ == '__main__':
 	PicInPic().run()
